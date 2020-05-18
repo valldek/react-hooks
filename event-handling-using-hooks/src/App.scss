@@ -38,6 +38,7 @@
     font-size: 1.8rem;
     font-family: 'Lato', sans-serif;
     color: $yellow;
+    transition: border-bottom 100ms ease-in;
 
 
     &:focus {
@@ -46,6 +47,10 @@
 
     &:focus ~ .form__icon {
       fill: $yellow;
+    }
+
+    &:invalid {
+      border-bottom: 1px solid $red;
     }
 
     &::placeholder {

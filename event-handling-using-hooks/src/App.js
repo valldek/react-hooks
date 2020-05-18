@@ -7,6 +7,7 @@ const App = () => {
   const [ email, setEmail ] = useState('');
   const [ password, setPassword ] = useState('');
   const [ showPassword, setShowPassowrd] = useState(false);
+  const [ resetPassword, setResetPassword] = useState(false);
 
   const handleLogIn = (evt) => {
     evt.preventDefault();
@@ -25,14 +26,17 @@ const App = () => {
         <div className="form__field">
           <input
               className="form__input"
-              type="text"
+              type="email"
               placeholder="Please provide email address"
               value={email}
               onChange={ (evt) => setEmail(evt.target.value)}
             />
         </div>
 
-        <div className="form__field">
+        <div
+          className="form__field"
+          hidden={resetPassword}
+        >
           <input
             className="form__input"
             type={showPassword ? "text" : "password" }
@@ -70,9 +74,17 @@ const App = () => {
             className="form__button"
             type="submit"
             onClick = { (evt) => handleLogIn(evt) }
-            >Log in
+            >
+              {resetPassword ? 'Reset' : 'Log in' }
           </button>
-          <a className="form__link" href="#">Forgot Password? </a>
+          <a
+            className="form__link" href="#"
+            onClick={ () => setResetPassword(!resetPassword) }
+          >
+            {
+              resetPassword ? 'Cancel' : 'Forgot Password?'
+            }
+          </a>
         </div>
       </form>
       <div className="form__footer">
