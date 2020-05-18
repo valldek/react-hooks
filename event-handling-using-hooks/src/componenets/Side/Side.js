@@ -2,7 +2,7 @@ import React from 'react';
 
 const Side = (props) => {
   return (
-    <div className="container">
+    <div className={ `side ${props.cssClass}` }>
       {props.children}
     </div>
   );
