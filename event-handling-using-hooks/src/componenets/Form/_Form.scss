@@ -1,0 +1,111 @@
+.form {
+
+  &__field {
+    width: 100%;
+    height: 5rem;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    // background-color: lighten($blue, 5%);
+    background-color: $blue;
+    border: none;
+    border-bottom: 1px solid $navy;
+    padding: 0 6rem;
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+    color: $yellow;
+    transition: border-bottom 100ms ease-in;
+
+
+    &:focus {
+      border-bottom: 1px solid $yellow;
+    }
+
+    &:focus ~ .form__icon {
+      fill: $yellow;
+    }
+
+    &:invalid {
+      border-bottom: 1px solid $red;
+    }
+
+    &::placeholder {
+      color: $navy;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 1.5rem;
+    fill: $navy;
+    transition: fill 100ms ease-in;
+
+    &:hover {
+      fill: $yellow;
+    }
+
+    width: 5rem;
+    height: 5rem;
+
+    &--right {
+      right: 4rem;
+      left: unset;
+    }
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+
+    }
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    padding:0 6rem;
+  }
+
+  &__button {
+    position: relative;
+    border: 2px solid $yellow;
+    background: none;
+    color: $yellow;
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
+    filter: drop-shadow(0 2px 2px black);
+    cursor: pointer;
+    transition:
+      color 100ms ease-in,
+      border-color 100ms ease-in;
+
+    &:hover {
+      filter: drop-shadow(0 0 0 black);
+      color: $navy;
+      border-color: $navy;
+    }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0;
+    color: $yellow;
+    text-decoration: underline;
+    transition:
+      color 100ms ease-in;
+
+    &:hover {
+      color: $navy;
+    }
+  }
+}
