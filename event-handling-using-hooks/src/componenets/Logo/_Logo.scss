@@ -1,0 +1,13 @@
+.logo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 4rem auto;
+  fill: $yellow;
+  filter: drop-shadow(0 2px 2px black);
+  transition: fill 100ms ease-in;
+
+  &:hover {
+    fill: $navy;
+  }
+}

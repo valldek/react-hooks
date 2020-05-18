@@ -1,0 +1,65 @@
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  // border: 1px dotted white;
+
+  &__rect {
+    position: absolute;
+    top:20px;
+    left: 20px;
+    width: 110px;
+    height: 110px;
+    transform: rotateZ(45deg);
+    filter: drop-shadow(0 2px 2px black);
+
+    &--first,
+    &--second,
+    &--third {
+      animation-duration: 4s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+
+    &--first {
+      border: 2px solid $navy;
+      animation-name: rotate-first-rect;
+    }
+
+    &--second {
+      border: 2px solid $yellow;
+      animation-name: rotate-second-rect;
+    }
+
+    &--third {
+      border: 2px solid $navy;
+      animation-name: rotate-third-rect;
+    }
+  }
+}
+
+
+
+
+
+.rotate-rect-one,
+.rotate-rect-two,
+.rotate-rect-three {
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+.rotate-rect-one {
+  animation-name: rotate-rect-one;
+}
+
+.rotate-rect-two {
+  animation-name: rotate-rect-two;
+}
+
+.rotate-rect-three {
+  animation-name: rotate-rect-three;
+}
