@@ -6,6 +6,11 @@
     position: relative;
   }
 
+  &__label {
+    position: absolute;
+    opacity: 0;
+  }
+
   &__input {
     width: 100%;
     height: 100%;
@@ -24,7 +29,7 @@
       border-bottom: 1px solid $yellow;
     }
 
-    &:focus ~ .form__icon {
+    &:focus .form__icon {
       fill: $yellow;
     }
 

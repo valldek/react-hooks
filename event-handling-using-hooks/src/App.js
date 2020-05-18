@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Side from './componenets/Side/Side';
+import Loader from './componenets/Loader/Loader';
 import Logo from './componenets/Logo/Logo';
 import Input from './componenets/Input/Input';
 import Footer from './componenets/Footer/Footer';
@@ -19,18 +21,22 @@ const App = () => {
   }
 
   return (
-    <div className="container">
-      <Logo />
-      <form className="form" action="">
-        <div className="form__field">
-          <Input
-            type="email"
-            cssClass="form__input"
-            placeholder="Email Address"
-            value={email}
-            onChange={ (evt) => setEmail(evt.target.value)}
-          />
-        </div>
+    <React.Fragment>
+      <Side>
+        <Loader />
+      </Side>
+      <Side>
+        <Logo />
+        <form className="form" action="">
+        <Input
+          type="email"
+          cssClass="form__input"
+          placeholder="Email Address"
+          label="Email Address: "
+          name="login-email"
+          value={email}
+          onChange={ (evt) => setEmail(evt.target.value)}
+        />
 
         <div
           className="form__field"
@@ -40,6 +46,8 @@ const App = () => {
             type={showPassword ? "text" : "password" }
             cssClass="form__input"
             placeholder="Password"
+            label="Password: "
+            name="login-password"
             value={password}
             onChange={ (evt) => setPassword(evt.target.value)}
           />
@@ -86,9 +94,14 @@ const App = () => {
           </a>
         </div>
       </form>
-      <Footer />
-    </div>
-  )
+        <Footer />
+      </Side>
+      <Side>
+        <Logo />
+        <Footer />
+      </Side>
+    </React.Fragment>
+  );
 }
 
 export default App;
