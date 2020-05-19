@@ -1,3 +1,17 @@
+# Login UI with React Hooks.
+
+Started with youtube tutorial on Hooks [Modern React Event Handling Using Hooks](https://www.youtube.com/watch?v=xHVm5qhaXWk&list=PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR)  
+
+![Starting Point](./.README/starting.png)
+
+Ended up redesining UI and decomposed it to smaller pieces. (React, Hooks, SCSS, BEM, CSS Animations)
+
+![Login View](./.README/finished-01.png) ![Reset Password View](./.README/finished-02.png)
+
+
+---
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

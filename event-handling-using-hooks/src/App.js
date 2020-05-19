@@ -7,13 +7,7 @@ import Form from './componenets/Form/Form';
 import Footer from './componenets/Footer/Footer';
 
 const App = () => {
-  // stateName - enything you want
-  // setStateName - by convention set and then stateName -> setStateName
-  // useState() - one parameter - default value for stateName
-  // const [ email, setEmail ] = useState('');
-  // const [ password, setPassword ] = useState('');
-  // const [ showPassword, setShowPassowrd] = useState(false);
-  // const [ isResetPassword, setIsResetPassword ] = useState(false);
+
   const [ currentSide, setCurrentSide ] = useState('login');
 
   return (

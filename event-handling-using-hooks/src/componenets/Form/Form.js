@@ -15,10 +15,9 @@ const Form = (props) => {
   const formRender = () => {
     if (!props.isResetPassword) {
       return (
-        <form class="form" action="">
+        <form className="form" action="">
           <Input
             type="email"
-            cssClass="form__input"
             placeholder="Email Address"
             label="Email Address: "
             name="login-email"
@@ -28,7 +27,6 @@ const Form = (props) => {
 
           <Input
             type="password"
-            cssClass="form__input"
             placeholder="Password"
             label="Password: "
             name="login-password"
@@ -42,21 +40,20 @@ const Form = (props) => {
               onClick={(evt) => handleFormSubmit(evt)}
             >Log in
             </button>
-            <a
+            <button
+              type="button"
               className="form__link"
-              href="#"
               onClick={() => props.setCurrentSide('reset')}
             >Forgot Password?
-            </a>
+            </button>
           </div>
         </form>
       );
     }
     return (
-      <form class="form" action="">
+      <form className="form" action="">
         <Input
           type="email"
-          cssClass="form__input"
           placeholder="Email Address"
           label="Email Address: "
           name="login-email"
@@ -70,12 +67,12 @@ const Form = (props) => {
             onClick={(evt) => handleFormSubmit(evt)}
           >Reset
           </button>
-          <a
+          <button
+            type="button"
             className="form__link form__link--cancel"
-            href="#"
             onClick={() => props.setCurrentSide('login')}
           >Cancel
-          </a>
+          </button>
         </div>
       </form>
     );

@@ -8,14 +8,14 @@ const Input = (props) => {
     if (props.type === 'password') {
       return (
         <div
-          className="form__icon form__icon--right"
+          className="input__icon input__icon--right"
           onMouseDown={ () => setShowPassowrd(!showPassword) }
           onMouseUp={ () => setShowPassowrd(!showPassword) }
           onMouseLeave={ () => setShowPassowrd(false) }
         >
 
         { !showPassword ?
-          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <svg className="input__svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
             <mask id="path-2-inside-1" >
             <path d="M6.42179 25C8.25869 16.4273 15.8788 10 25 10C34.1212 10 41.7413 16.4273 43.5782 25C41.7413 33.5727 34.1212 40 25 40C15.8788 40 8.25869 33.5727 6.42179 25Z"/>
             </mask>
@@ -23,7 +23,7 @@ const Input = (props) => {
             <path d="M20 23C21.6569 23 23 21.6569 23 20C23 19.7823 22.9768 19.5701 22.9328 19.3656C23.5773 19.1291 24.2735 19 25 19C28.3137 19 31 21.6863 31 25C31 28.3137 28.3137 31 25 31C21.6863 31 19 28.3137 19 25C19 24.2735 19.1291 23.5773 19.3656 22.9328C19.5701 22.9768 19.7823 23 20 23Z" />
           </svg>
           :
-          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <svg className="input__svg" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
             <path d="M27.7642 19.6733C26.937 19.2431 25.9969 19 25 19C24.2735 19 23.5773 19.1291 22.9328 19.3656C22.9768 19.5701 23 19.7823 23 20C23 21.6569 21.6569 23 20 23C19.7823 23 19.5701 22.9768 19.3656 22.9328C19.1291 23.5773 19 24.2735 19 25C19 25.9969 19.2431 26.937 19.6733 27.7642L27.7642 19.6733ZM24.4042 30.9708C24.6002 30.9901 24.7989 31 25 31C28.3137 31 31 28.3137 31 25C31 24.7989 30.9901 24.6002 30.9708 24.4042L24.4042 30.9708Z" />
             <path d="M34.749 12.6885C31.8988 10.9813 28.564 10 25 10C15.8788 10 8.25869 16.4273 6.42179 25C7.27573 28.9853 9.37947 32.5069 12.3028 35.1347L13.7192 33.7183C11.1657 31.452 9.29928 28.4287 8.47278 25C10.2708 17.5409 16.9906 12 25 12C28.0077 12 30.8336 12.7814 33.2852 14.1523L34.749 12.6885ZM18.6149 36.7601C20.5865 37.5596 22.742 38 25 38C33.0094 38 39.7291 32.4591 41.5272 25C40.8613 22.2376 39.5204 19.7383 37.689 17.686L39.105 16.27C41.2949 18.6949 42.8684 21.6873 43.5782 25C41.7413 33.5727 34.1212 40 25 40C22.1785 40 19.5007 39.385 17.0932 38.2818L18.6149 36.7601Z" />
             <line x1="10.7329" y1="40.7329" x2="40.7329" y2="10.7329" stroke-width="2"/>
@@ -35,11 +35,11 @@ const Input = (props) => {
   }
 
   return (
-    <div className="form__field">
-      <label class="form__label" for={props.name}> {props.label} </label>
+    <div className="input">
+      <label className="input__label" htmlFor={props.name}> {props.label} </label>
       <input
         type={ showPassword ? 'text' : props.type}
-        className={props.cssClass}
+        className="input__field"
         placeholder={props.placeholder}
         name={props.name}
         value={props.value}

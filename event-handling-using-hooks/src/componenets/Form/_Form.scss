@@ -1,79 +1,6 @@
 .form {
   width: 92%;
 
-  &__field {
-    width: 100%;
-    height: 5rem;
-    position: relative;
-  }
-
-  &__label {
-    position: absolute;
-    opacity: 0;
-  }
-
-  &__input {
-    width: 100%;
-    height: 100%;
-    // background-color: lighten($blue, 5%);
-    background-color: $blue;
-    border: 0;
-    outline: 0;
-    border-bottom: 1px solid $navy;
-    padding: 0 4rem;
-    font-size: 1.8rem;
-    font-family: 'Lato', sans-serif;
-    color: $yellow;
-    transition: border-bottom 100ms ease-in;
-
-
-    &:focus {
-      border-bottom: 1px solid $yellow;
-    }
-
-    &:focus .form__icon {
-      fill: $yellow;
-    }
-
-    &:invalid {
-      box-shadow: unset;
-      border-bottom: 1px solid $red;
-    }
-
-    &::placeholder {
-      color: $navy;
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 1.5rem;
-    fill: $navy;
-    transition: fill 100ms ease-in;
-
-    &:hover {
-      fill: $yellow;
-    }
-
-    width: 5rem;
-    height: 5rem;
-
-    &--right {
-      right: 2rem;
-      left: unset;
-    }
-
-    svg {
-      width: 3rem;
-      height: 3rem;
-
-    }
-  }
-
   &__controls {
     display: flex;
     justify-content: space-between;
@@ -104,6 +31,9 @@
   }
 
   &__link {
+    cursor: pointer;
+    background: none;
+    border: none;
     font-size: 1.4rem;
     padding: 0;
     margin: 0;
