@@ -15,7 +15,7 @@ const Form = (props) => {
   const formRender = () => {
     if (!props.isResetPassword) {
       return (
-        <form class="form" action="">
+        <form className="form" action="">
           <Input
             type="email"
             cssClass="form__input"
@@ -53,7 +53,7 @@ const Form = (props) => {
       );
     }
     return (
-      <form class="form" action="">
+      <form className="form" action="">
         <Input
           type="email"
           cssClass="form__input"

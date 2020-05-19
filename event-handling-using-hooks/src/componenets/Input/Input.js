@@ -36,7 +36,7 @@ const Input = (props) => {
 
   return (
     <div className="form__field">
-      <label class="form__label" for={props.name}> {props.label} </label>
+      <label className="form__label" htmlFor={props.name}> {props.label} </label>
       <input
         type={ showPassword ? 'text' : props.type}
         className={props.cssClass}
