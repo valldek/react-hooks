@@ -1,0 +1,70 @@
+.input {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+
+  &__label {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__field {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid $navy;
+    padding: 0 4rem;
+    background-color: $blue;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8rem;
+    color: $yellow;
+    transition: border-bottom 100ms ease-in;
+
+    &:focus {
+      border-bottom: 1px solid $yellow;
+    }
+
+    &:focus .form__icon {
+      fill: $yellow;
+    }
+
+    &:invalid {
+      border-bottom: 1px solid $red;
+      box-shadow: unset;
+    }
+
+    &::placeholder {
+      color: $navy;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $navy;
+    transition: fill 100ms ease-in;
+
+    &:hover {
+      fill: $yellow;
+    }
+
+    width: 5rem;
+    height: 5rem;
+
+    &--right {
+      right: 2rem;
+      left: unset;
+    }
+  }
+
+  &__svg {
+    width: 3rem;
+    height: 3rem;
+
+  }
+}
