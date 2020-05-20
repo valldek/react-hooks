@@ -11,7 +11,6 @@ const Quotes = (props) => {
     })
   }
 
-
   return (
     <div className="quotes" style={{transform: `rotateY(${180*props.current}deg)`}}>
       {getQuotes()}

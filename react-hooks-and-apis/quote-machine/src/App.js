@@ -34,8 +34,6 @@ const App = () => {
     } else {
       side === 'left' ? setCurrent(current - 1) : setCurrent(current + 1) ;
     }
-
-    // fetch quote
   }
 
   return (
