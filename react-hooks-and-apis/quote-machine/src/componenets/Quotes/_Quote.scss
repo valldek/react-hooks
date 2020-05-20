@@ -1,0 +1,50 @@
+.quote {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  padding: 3rem;
+  font-size: 1.6rem;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    border-top:40px solid $blue;
+    border-right:30px solid transparent;
+    border-left:30px solid transparent;
+    bottom: 0;
+    right: -10px;
+    transform: rotateZ(-45deg);
+  }
+
+
+  &--front {
+    // transform: rotateY(0) translateZ(10rem);
+    background-color: $blue;
+    left: 20px;
+    box-shadow: 1px 1px 5px 0 $black;
+
+    &::after {
+      z-index: -1;
+      filter: drop-shadow(1px 2px 3px $black);
+    }
+  }
+
+  &--back {
+    transform: rotateY(180deg) translateZ(10rem);
+    background-color: $blue;
+    left: -20px;
+    top: 0;
+    opacity: 0.5;
+
+  }
+
+  &__author {
+    content: '- ';
+    font-size: 1.4rem;
+    font-weight: 700;
+    float: right;
+  }
+}

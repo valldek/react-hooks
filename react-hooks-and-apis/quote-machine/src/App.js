@@ -21,16 +21,31 @@ const data = [
     quote: "Life is what happens when you're busy making other plans.",
     author: "John Lennon"
   },
-
-]
+];
 
 const App = () => {
+  const [ current, setCurrent ] = useState(0);
+
+  const handleArrowClick = (side) => {
+    if (current === 0 ) {
+      side === 'left' ? setCurrent(current) : setCurrent(current + 1);
+    } else if (current === data.length - 1) {
+      side === 'left' ? setCurrent(current - 1) : setCurrent(current) ;
+    } else {
+      side === 'left' ? setCurrent(current - 1) : setCurrent(current + 1) ;
+    }
+
+    // fetch quote
+  }
+
   return (
     <React.Fragment>
       <div className="container">
-        <Arrow side="left" />
-        <Quotes />
-        <Arrow side="right"/>
+        <div className="carousel">
+          <Arrow side="left" clicked={handleArrowClick}/>
+          <Quotes quotes={data.slice(current, current + 2)}/>
+          <Arrow side="right" clicked={handleArrowClick}/>
+        </div>
 
       </div>
       <Logo />
