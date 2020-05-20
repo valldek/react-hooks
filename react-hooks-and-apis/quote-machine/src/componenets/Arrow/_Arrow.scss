@@ -1,0 +1,74 @@
+.arrow {
+  position: absolute;
+  top: calc(50% - 2.5rem);
+  width: 5rem;
+  height: 5rem;
+
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+
+  // box-shadow: 1px 1px 1px 0 $black;
+
+  &--left {
+    background: linear-gradient(90deg, $salmon, $salmon-light );
+    box-shadow: 1px 1px 1px 0 $black;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 3rem;
+      width: 0.5rem;
+      height: 2rem;
+      background-color: $black;
+      // border: 1px solid $black;
+      border-radius: 5px;
+      transform-origin: left top;
+    }
+
+    &::before {
+      top: 1.2rem;
+      transform-origin: left top;
+      transform: rotateZ(52deg);
+    }
+
+    &::after {
+      top: 1.8rem;
+      transform-origin: left bottom;
+      transform: rotateZ(-52deg);
+    }
+  }
+
+  &--right {
+    right: 0;
+    background: linear-gradient(90deg, $salmon-light, $salmon );
+    box-shadow: -1px -1px 1px 0 $black;
+    transform: rotateZ(180deg);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 3rem;
+      width: 0.5rem;
+      height: 2rem;
+      background-color: $black;
+      border-radius: 5px;
+      transform-origin: left top;
+    }
+
+    &::before {
+      top: 1.2rem;
+      transform-origin: left top;
+      transform: rotateZ(52deg);
+    }
+
+    &::after {
+      top: 1.8rem;
+      transform-origin: left bottom;
+      transform: rotateZ(-52deg);
+    }
+  }
+}
